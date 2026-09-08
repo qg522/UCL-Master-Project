@@ -66,7 +66,7 @@ The project uses the following datasets:
 
 The prepared project datasets are available through Dropbox:
 
-**[Download the datasets](https://www.dropbox.com/home)**
+**[Download the datasets](https://www.dropbox.com/scl/fo/f8h12x79vri8wgx61miay/AI4wc1VaOFeJk9OstDzqq6g?rlkey=2aghsgidpxbld5zae7dcn0uuj&st=0imzptlv&dl=0)**
 
 Use of the datasets remains subject to the licenses, access conditions, and citation requirements of their original providers.
 
