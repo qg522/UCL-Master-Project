@@ -12,9 +12,9 @@ Cardiac diseases are expressed not only through anatomical abnormalities but als
 
 PhysioDiff-4D addresses this problem by estimating how the same subject would move under a healthy cardiac dynamic prior. Given an observed pathological cine MRI sequence \(X^p\) and its generated healthy reference \(\hat{X}^h\), the normal-reference deviation is defined as
 
-\[
-\Delta X = X^p - \hat{X}^h.
-\]
+
+$\Delta X = X^p - \hat{X}^h.$
+
 
 The deviation captures departures from expected subject-specific cardiac motion and is used together with the original pathological sequence for downstream disease classification.
 
