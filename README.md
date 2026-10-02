@@ -64,9 +64,11 @@ The project uses the following datasets:
 | M&Ms | Tokenizer adaptation and heterogeneous evaluation | 375 multi-centre, multi-vendor, and multi-disease cardiac MRI studies. A subset of 25 unlabelled cine sequences is used exclusively for tokenizer adaptation. |
 | BU-4DFE | Backbone initialization | Temporally continuous non-rigid 3D facial sequences used to initialize the spatio-temporal tokenizer backbone before cardiac-domain adaptation. |
 
-The prepared project datasets are available through Dropbox:
+The generation result are available through Dropbox:
 
-**[Download the datasets](https://www.dropbox.com/scl/fo/f8h12x79vri8wgx61miay/AI4wc1VaOFeJk9OstDzqq6g?rlkey=2aghsgidpxbld5zae7dcn0uuj&st=0imzptlv&dl=0)**
+**[Download the final result](https://www.dropbox.com/scl/fo/f8h12x79vri8wgx61miay/AI4wc1VaOFeJk9OstDzqq6g?rlkey=2aghsgidpxbld5zae7dcn0uuj&st=0imzptlv&dl=0)**
+
+This dropbox contains the counter-factual result to represent normal cardiac dynamic cine video in both M&Ms and ACDC.
 
 Use of the datasets remains subject to the licenses, access conditions, and citation requirements of their original providers.
 
