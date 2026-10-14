@@ -34,4 +34,4 @@ python infer.py --device cuda --batch-size 2 --out outputs/predictions.csv
 
 ## 数据与许可
 
-ACDC影像按原数据条款使用，许可和引用见`data/LICENSE_TERMS.md`及`data/MANDATORY_CITATION.md`。生成参考来源为本地已有影像，原始生成检查点未随此包提供。未为整个模型代码新增统一开源许可。
+ACDC影像按原数据条款使用，许可和引用见`data/LICENSE_TERMS.md`及`data/MANDATORY_CITATION.md`。
