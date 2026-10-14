@@ -201,3 +201,10 @@ ACDC影像按原数据条款使用，许可和引用见`data/LICENSE_TERMS.md`�
 The current generation method is provided in [`heartmirror/tokenizer.py`](heartmirror/tokenizer.py) and [`heartmirror/generation.py`](heartmirror/generation.py), with the algorithm described in [GENERATION_METHOD.md](GENERATION_METHOD.md).
 
 The original ECHOPulse method and training code is available under [`EchoPulse_pytorch/`](EchoPulse_pytorch/), with `step1_train.py`, `step2_train.py` and `EchoPulse_train.py` at the repository root. See [ECHOPULSE_LEGACY.md](ECHOPULSE_LEGACY.md) for layout, dependencies and historical execution assumptions. Root classification inference continues to use `requirements.txt`; legacy dependencies are recorded separately in `requirements-echopulse.txt`.
+
+
+## Current three-stage training and generation inference
+
+`step1_train_acdc.py`, `step2_train_acdc.py` and `step3_train_acdc.py` train the current tokenizer, generator and classifier. `infer_acdc.py` generates references; `eval_acdc.py` evaluates generation. The shared entry point is `heartmirror_cli.py`.
+
+See [TRAINING.md](TRAINING.md) for dependencies, workflow templates and required inputs. No additional experiment configuration files are supplied; provide your own manifests, partitions, configuration and stage checkpoints. Root `infer.py` and the packaged classifier weights retain their existing inference role.

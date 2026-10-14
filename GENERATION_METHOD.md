@@ -1,6 +1,6 @@
 # Healthy reference generation: method implementation
 
-This source release provides method modules, not a generation training or inference CLI. Generator/tokenizer checkpoints and perceptual-backbone weights are not bundled. The existing root `infer.py` remains the disease-classification entry point.
+This source release provides method modules plus three-stage training and generation inference entries described in TRAINING.md. Generator/tokenizer checkpoints and perceptual-backbone weights are not bundled. The existing root `infer.py` remains the disease-classification entry point.
 
 ## Modules
 
@@ -34,4 +34,4 @@ Temporal/depth residuals sum over H,W and average the remaining dimensions; cycl
 
 ## Scope
 
-The root configuration is the published classifier-compatible 30-phase, 16-slice, 128-pixel setting. Instantiating generation modules with it is supported; this does not supply a trained generator or certify reproduction of another resolution. Method implementation is available without new stage-training or generation-inference entry points.
+The root configuration is the published classifier-compatible 30-phase, 16-slice, 128-pixel setting. Instantiating generation modules with it is supported; this does not supply a trained generator or certify reproduction of another resolution. Stage-training and generation-inference entry points are supplied; use your own inputs and stage checkpoints as described in TRAINING.md.
