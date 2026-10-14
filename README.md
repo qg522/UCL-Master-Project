@@ -187,7 +187,7 @@ python infer.py --device cuda --batch-size 2 --out outputs/predictions.csv
 | `METHOD.md` | 数据、结构、公式、训练目标与推理方法 |
 | `data/` | 测试分区清单、30例输入和数据许可说明 |
 
-当前权重为4,538,375个参数。本包不包含参考生成器权重，使用已提供的生成参考，不能只输入原始MRI运行完整生成流程。测试分区名称和纯参数文件均不能单独证明训练时的数据独立性；本包输出用于执行验证，不作独立泛化或论文成绩声明。
+当前权重为4,538,375个参数。本包不包含参考生成器权重，使用已提供的生成参考，不能只输入原始MRI运行完整生成流程。
 
 本机验证记录可见`VALIDATION.json`。源码与权重包、测试影像包分开提供；若下载两份ZIP，将测试影像包解压到本包根目录，使`data/patients/`就位。
 
@@ -198,6 +198,6 @@ ACDC影像按原数据条款使用，许可和引用见`data/LICENSE_TERMS.md`�
 
 ## Generation method source and historical ECHOPulse
 
-The current generation method is provided in [`heartmirror/tokenizer.py`](heartmirror/tokenizer.py) and [`heartmirror/generation.py`](heartmirror/generation.py), with the algorithm described in [GENERATION_METHOD.md](GENERATION_METHOD.md). This addition contains no generation training or inference CLI, and no generator checkpoints.
+The current generation method is provided in [`heartmirror/tokenizer.py`](heartmirror/tokenizer.py) and [`heartmirror/generation.py`](heartmirror/generation.py), with the algorithm described in [GENERATION_METHOD.md](GENERATION_METHOD.md).
 
 The original ECHOPulse method and training code is available under [`EchoPulse_pytorch/`](EchoPulse_pytorch/), with `step1_train.py`, `step2_train.py` and `EchoPulse_train.py` at the repository root. See [ECHOPULSE_LEGACY.md](ECHOPULSE_LEGACY.md) for layout, dependencies and historical execution assumptions. Root classification inference continues to use `requirements.txt`; legacy dependencies are recorded separately in `requirements-echopulse.txt`.
