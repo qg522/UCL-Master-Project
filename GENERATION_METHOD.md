@@ -34,4 +34,4 @@ Temporal/depth residuals sum over H,W and average the remaining dimensions; cycl
 
 ## Scope
 
-The root configuration is the published classifier-compatible 30-phase, 16-slice, 128-pixel setting. Instantiating generation modules with it is supported; this does not supply a trained generator or certify reproduction of another resolution. Stage-training and generation-inference entry points are supplied; use your own inputs and stage checkpoints as described in TRAINING.md.
+The published classifier uses a 30-phase, 16-slice, 128-pixel setting. Configuration must be provided by the user; this does not supply a trained generator or certify reproduction of another resolution. Stage-training and generation-inference entry points are supplied; use your own inputs and stage checkpoints as described in TRAINING.md.

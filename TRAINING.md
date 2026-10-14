@@ -17,7 +17,7 @@ python -m pip install -r requirements-training.txt
 | `eval_acdc.py` | Evaluate generated references |
 | `heartmirror_cli.py` | Prepare manifests/splits, run stages and evaluate |
 
-Use `python <entry> --help` for full arguments. Stage execution requires your own manifest, patient partitions and relevant checkpoints. No additional experiment configuration files are supplied with this change. The root config.json belongs to the existing packaged classification model; it is not automatically the configuration for a new training experiment. The Config Python class remains required model code.
+Use `python <entry> --help` for full arguments. Stage execution requires your own manifest, patient partitions and relevant checkpoints. No additional experiment configuration files are supplied with this change. No root configuration JSON is supplied; classification inference also requires an explicit model-compatible --config path. The Config Python class remains required model code.
 
 ## Workflow templates
 
