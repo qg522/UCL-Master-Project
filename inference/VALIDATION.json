@@ -1,0 +1,11 @@
+{
+  "patient_count": 30,
+  "partition": "seed0_test",
+  "all_input_files_match": true,
+  "weights_match": true,
+  "probability_sums_valid": true,
+  "parameters": 4538375,
+  "device": "cuda",
+  "torch_version": "2.3.1+cu121",
+  "accuracy": 0.8333333333333334
+}

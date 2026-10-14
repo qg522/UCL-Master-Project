@@ -1,0 +1,66 @@
+{
+  "phases": 30,
+  "slices": 16,
+  "image_size": 128,
+  "epochs": [
+    200,
+    300,
+    50
+  ],
+  "batch_sizes": [
+    32,
+    32,
+    8
+  ],
+  "lr": 0.0001,
+  "views": 5,
+  "shots": 4,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "dim": 128,
+  "heads": 4,
+  "bits": 10,
+  "patch": 16,
+  "spatial_layers": 2,
+  "temporal_layers": 2,
+  "ar_layers": 4,
+  "corrector_layers": 2,
+  "classifier_layers": 4,
+  "classifier_patch": [
+    5,
+    2,
+    32,
+    32
+  ],
+  "classifier_encoder_layers": 2,
+  "token_temperature": 1.0,
+  "sample_temperature": 1.0,
+  "risk_threshold": 0.5,
+  "max_corrections": 30,
+  "random_mask_rate": 0.15,
+  "contrast_temperature": 0.1,
+  "focal_gamma": 2.0,
+  "contrast_weight": 0.1,
+  "weight_decay": 0.01,
+  "slice_chunk": 32,
+  "gradient_checkpointing": true,
+  "tokenizer_weights": {
+    "rec": 1.0,
+    "per": 0.1,
+    "lfq": 0.1
+  },
+  "generator_weights": {
+    "ar": 1.0,
+    "det": 1.0,
+    "res": 1.0,
+    "mae": 1.0,
+    "temp": 1.0,
+    "depth": 1.0,
+    "cyc": 1.0
+  }
+}

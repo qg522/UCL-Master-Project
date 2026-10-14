@@ -141,3 +141,18 @@ If this project supports your research, please cite the accompanying thesis:
 ## Acknowledgements
 
 This work was completed as part of the MSc Machine Learning programme at University College London under the supervision of Dr. Yipeng Hu. We acknowledge the organizers and contributors of ACDC, M&Ms, and BU-4DFE for making their datasets available to the research community.
+
+
+## Runnable ACDC classification inference
+
+The [`inference/`](inference/README.md) directory contains the runnable classifier, tensor-only weights, model configuration, data loader, and implementation-level [method description](inference/METHOD.md). This release uses precomputed aligned healthy references; it does not include healthy-reference generator weights.
+
+Download `heartmirror-inference-test-data.zip` from the repository Releases and extract it inside `inference/` so that `inference/data/patients/` is present. The supplied data contains only the seed0 test partition: 30 patients, six per diagnosis.
+
+```bash
+cd inference
+python -m pip install -r requirements.txt
+python infer.py
+```
+
+The entry point processes only `data/test.csv` and verifies `data/test_ids.json`. Outputs are per-patient class probabilities and predictions. Partition names and tensor-only weights do not establish training-data independence; this inference bundle makes no independent-generalization or paper-reproduction claim. ACDC terms and mandatory citation are included under `inference/data/`.
