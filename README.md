@@ -151,7 +151,7 @@ Download `heartmirror-inference-test-data.zip` from the repository Releases and 
 
 ```bash
 python -m pip install -r requirements.txt
-python infer.py --config YOUR_CONFIG
+python infer.py
 ```
 
 The entry point processes only `data/test.csv` and verifies `data/test_ids.json`. Outputs are per-patient class probabilities and predictions. Partition names and tensor-only weights do not establish training-data independence; this inference bundle makes no independent-generalization or paper-reproduction claim. ACDC terms and mandatory citation are included under `data/`.
@@ -165,14 +165,14 @@ The entry point processes only `data/test.csv` and verifies `data/test_ids.json`
 
 ```bash
 python -m pip install -r requirements.txt
-python infer.py --config YOUR_CONFIG
+python infer.py
 ```
 
 默认使用可用的CUDA，否则使用CPU。可以明确选择：
 
 ```bash
-python infer.py --config YOUR_CONFIG --device cpu --batch-size 1
-python infer.py --config YOUR_CONFIG --device cuda --batch-size 2 --out outputs/predictions.csv
+python infer.py --device cpu --batch-size 1
+python infer.py --device cuda --batch-size 2 --out outputs/predictions.csv
 ```
 
 推理只读取`data/test.csv`，并核对`data/test_ids.json`中的患者顺序；不遍历训练或验证分区。输出每例标签、预测类别和五类概率。标签只用于输出及计算分区准确率，不参与模型前向。
@@ -182,7 +182,7 @@ python infer.py --config YOUR_CONFIG --device cuda --batch-size 2 --out outputs/
 | `infer.py` | 严格加载参数并执行分类推理 |
 | `dataloader.py` | 读取配对MRI并计算有符号差异 |
 | `weights/ACDC.pt` | 127项张量组成的纯state_dict |
-| `classes.json` | 固定类别顺序；模型配置由使用者通过`--config`提供 |
+| `config.json`、`classes.json` | 参数对应的配置与类别顺序 |
 | `heartmirror/` | 推理所需模型及Transformer实现 |
 | `METHOD.md` | 数据、结构、公式、训练目标与推理方法 |
 | `data/` | 测试分区清单、30例输入和数据许可说明 |

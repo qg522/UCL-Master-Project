@@ -19,7 +19,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--data', type=Path, default=BASE/'data')
     parser.add_argument('--weights', type=Path, default=BASE/'weights/ACDC.pt')
-    parser.add_argument('--config', type=Path, required=True, help='Path to your model-compatible configuration')
+    parser.add_argument('--config', type=Path, default=BASE/'config.json')
     parser.add_argument('--classes', type=Path, default=BASE/'classes.json')
     parser.add_argument('--out', type=Path, default=BASE/'outputs/predictions.csv')
     parser.add_argument('--device', default='cuda' if torch.cuda.is_available() else 'cpu')

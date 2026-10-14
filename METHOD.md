@@ -40,7 +40,7 @@ patch数为(30/5)×(16/2)×(128/32)×(128/32)=768。每路加入可学习位置�
 
 ## 6. 推理流程
 
-1. 读取`--config`指定的配置及固定类别顺序，建立full variant分类器。
+1. 读取config.json及固定类别顺序，建立full variant分类器。
 2. 以weights_only=True读取纯state_dict，再strict=True加载，检查参数键和形状。
 3. 调用eval及torch.inference_mode；不使用随机增强或标签指导前向。
 4. 按test.csv顺序读取30例，并核对test_ids.json。
