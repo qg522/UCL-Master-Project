@@ -194,3 +194,10 @@ python infer.py --device cuda --batch-size 2 --out outputs/predictions.csv
 ### 数据与许可
 
 ACDC影像按原数据条款使用，许可和引用见`data/LICENSE_TERMS.md`及`data/MANDATORY_CITATION.md`。
+
+
+## Generation method source and historical ECHOPulse
+
+The current generation method is provided in [`heartmirror/tokenizer.py`](heartmirror/tokenizer.py) and [`heartmirror/generation.py`](heartmirror/generation.py), with the algorithm described in [GENERATION_METHOD.md](GENERATION_METHOD.md). This addition contains no generation training or inference CLI, and no generator checkpoints.
+
+The original ECHOPulse method and training code is available under [`EchoPulse_pytorch/`](EchoPulse_pytorch/), with `step1_train.py`, `step2_train.py` and `EchoPulse_train.py` at the repository root. See [ECHOPULSE_LEGACY.md](ECHOPULSE_LEGACY.md) for layout, dependencies and historical execution assumptions. Root classification inference continues to use `requirements.txt`; legacy dependencies are recorded separately in `requirements-echopulse.txt`.
