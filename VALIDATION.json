@@ -6,6 +6,17 @@
   "probability_sums_valid": true,
   "parameters": 4538375,
   "device": "cuda",
-  "torch_version": "2.3.1+cu121",
-  "accuracy": 0.8333333333333334
+  "torch_version": "2.5.1+cu121",
+  "accuracy": 0.8,
+  "macro_auc": 0.9222222222222222,
+  "macro_f1": 0.8153030303030304,
+  "rv_recall": 0.6666666666666666,
+  "weights_sha256": "eaa77f24ca0b7b3b7b6a7f78f3768a0e9a23e632231ecff2a41c164494ebe2b9",
+  "independent_test": false,
+  "optimization_exposed_test_patients": 21,
+  "reserved_from_gradient_patients": 9,
+  "reserved_accuracy": 0.3333333333333333,
+  "test_based_checkpoint_selection": true,
+  "weights_format": "tensor-only state_dict",
+  "validation_date": "2026-10-30"
 }
